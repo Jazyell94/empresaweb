@@ -1,0 +1,207 @@
+/* ============================================
+   BASE.CSS - Reset & Typography Foundation
+   Webgamma Replica v1.0.0
+   ============================================ */
+
+/* ─── Reset ─── */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--color-primary);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+}
+
+/* ─── Utilities ─── */
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
+/* ─── Typography ─── */
+h1, h2, h3, h4, h5, h6,
+.font-heading {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: var(--fs-huge);
+    line-height: var(--lh-huge);
+    letter-spacing: var(--ls-huge);
+}
+
+h2 {
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
+    letter-spacing: var(--ls-large);
+}
+
+h3 {
+    font-size: var(--fs-medium);
+    line-height: var(--lh-medium);
+    letter-spacing: var(--ls-medium);
+}
+
+p {
+    color: var(--color-primary);
+    margin-bottom: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity var(--transition-base);
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    outline: none;
+}
+
+/* ─── Selection ─── */
+::selection {
+    background: var(--color-heading);
+    color: var(--bg-primary);
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d0d0d0;
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* ─── Font Size Utilities (matching original) ─── */
+.has-small-font-size {
+    font-size: var(--fs-small) !important;
+    line-height: var(--lh-small) !important;
+    letter-spacing: var(--ls-small) !important;
+}
+
+.has-normal-font-size,
+.fs-sm-normal {
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
+    letter-spacing: var(--ls-normal);
+}
+
+.has-medium-font-size {
+    font-size: var(--fs-medium);
+    line-height: var(--lh-medium);
+    letter-spacing: var(--ls-medium);
+}
+
+.has-large-font-size {
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
+    letter-spacing: var(--ls-large);
+}
+
+.has-huge-font-size {
+    font-size: var(--fs-huge);
+    line-height: var(--lh-huge);
+    letter-spacing: var(--ls-huge);
+}
+
+.has-gigantic-font-size {
+    font-size: var(--fs-gigantic);
+    line-height: var(--lh-gigantic);
+    letter-spacing: var(--ls-gigantic);
+}
+
+/* Font Size Specific */
+.fs-48 { font-size: 48px; }
+.fs-20 { font-size: 20px; }
+.fs-18 { font-size: 18px; }
+.fs-sm-28 { font-size: 28px; }
+.fs-sm-22 { font-size: 22px; }
+.fs-sm-15 { font-size: 15px; }
+.fs-sm-13 { font-size: 13px; }
+.fs-sm-34 { font-size: 34px; }
+
+.font-inter {
+    font-family: var(--font-inter);
+}
+
+.color-heading {
+    color: var(--color-heading);
+}
+
+.color-white {
+    color: var(--color-white);
+}
+
+.color-gray {
+    color: var(--color-gray);
+}
+
+/* ─── Skip Link ─── */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 9999;
+    padding: 8px 16px;
+    background: var(--color-heading);
+    color: var(--bg-primary);
+}
+
+.skip-link:focus {
+    top: 0;
+}

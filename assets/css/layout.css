@@ -1,0 +1,301 @@
+/* ============================================
+   LAYOUT.CSS - Container, Grid & Spacing Utilities
+   Webgamma Replica v1.0.0
+   ============================================ */
+
+/* ─── Container ─── */
+.container {
+    width: 100%;
+    max-width: calc(var(--content-width) + 2 * var(--container-padding));
+    margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+/* ─── Section Wrapper ─── */
+.section {
+    position: relative;
+}
+
+.section-wide {
+    width: 100%;
+    max-width: calc(var(--content-width) + 2rem);
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* ─── Flexbox Utilities ─── */
+.d-flex {
+    display: flex;
+}
+
+.d-block--sm {
+    display: block;
+}
+
+.d-flex--sb {
+    justify-content: space-between;
+}
+
+.d-flex--center {
+    align-items: center;
+}
+
+.d-flex--align-center {
+    align-items: center;
+}
+
+.d-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.d-inline-flex {
+    display: inline-flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.md-flex {
+    display: flex;
+}
+
+/* ─── Grid Systems ─── */
+
+/* Two Column Grid */
+.cols-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Three Column Grid */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 100px;
+}
+
+/* Masonry Grid (3 columns) */
+.grid--masonry {
+    display: flex;
+    gap: 30px;
+    border: 1px solid red;
+}
+
+.grid--masonry .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ─── Column Utilities ─── */
+.col {
+    min-width: 0;
+}
+
+.col--text {
+    display: flex;
+}
+
+.col-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ─── Text Alignment ─── */
+.has-text-align-center {
+    text-align: center;
+}
+
+.has-text-align-left {
+    text-align: left;
+}
+
+.has-text-align-right {
+    text-align: right;
+}
+
+/* ─── Background Utilities ─── */
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
+.bg-footer {
+    background-color: var(--bg-footer);
+    color: var(--color-footer);
+}
+
+/* ─── Display Utilities ─── */
+.hide-sm {
+    display: block;
+}
+
+.hide-md {
+    display: none;
+}
+
+.hide-lg {
+    display: none;
+}
+
+/* ─── Spacing Utilities (matching original) ─── */
+
+/* Padding Top */
+.pt_1 {
+    padding-top: 10px;
+}
+
+.pt--100 {
+    padding-top: 100px;
+}
+
+.pt--150 {
+    padding-top: 150px;
+}
+
+.pt--250 {
+    padding-top: 250px;
+}
+
+.pt-sm--0 {
+    padding-top: 0;
+}
+
+.pt-sm--32 {
+    padding-top: 32px;
+}
+
+.pt-sm--54 {
+    padding-top: 54px;
+}
+
+.pt-sm--64 {
+    padding-top: 64px;
+}
+
+.pt-sm--74 {
+    padding-top: 74px;
+}
+
+.pt-sm--96 {
+    padding-top: 96px;
+}
+
+/* Padding Bottom */
+.pb_1 {
+    padding-bottom: 10px;
+}
+
+.pb--64 {
+    padding-bottom: 64px;
+}
+
+.pb--100 {
+    padding-bottom: 100px;
+}
+
+.pb--150 {
+    padding-bottom: 150px;
+}
+
+.pb-sm--12 {
+    padding-bottom: 12px;
+}
+
+.pb-sm--32 {
+    padding-bottom: 32px;
+}
+
+.pb-sm--64 {
+    padding-bottom: 64px;
+}
+
+.pb-sm--74 {
+    padding-bottom: 74px;
+}
+
+.pb-sm--96 {
+    padding-bottom: 96px;
+}
+
+.pb-sm--100 {
+    padding-bottom: 100px;
+}
+
+.pb-sm--127 {
+    padding-bottom: 127px;
+}
+
+/* Margin */
+.mb_0 {
+    margin-bottom: 0 !important;
+}
+
+.mb_2 {
+    margin-bottom: 20px;
+}
+
+.mb_3 {
+    margin-bottom: 30px;
+}
+
+.mt_2 {
+    margin-top: 20px;
+}
+
+.mt-sm--0 {
+    margin-top: 0;
+}
+
+.mb-sm--15 {
+    margin-bottom: 15px;
+}
+
+.mb-sm--18 {
+    margin-bottom: 18px;
+}
+
+.mb-sm--28 {
+    margin-bottom: 28px;
+}
+
+.mb-sm--32 {
+    margin-bottom: 32px;
+}
+
+.mb-sm--78 {
+    margin-bottom: 78px;
+}
+
+.pr_1 {
+    padding-right: 2rem;
+}
+
+.pt_5 {
+    padding-top: 50px;
+}
+
+.pt-sm--12 {
+    padding-top: 12px;
+}
+
+/* ─── Gap ─── */
+.gap-20 {
+    gap: 20px;
+}
+
+/* ─── Opacity ─── */
+.opacity-70 {
+    opacity: 0.7;
+}

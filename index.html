@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webgamma - UX Design, Branding and Web Design Agency</title>
+
+    <!-- JANELAS POP-UP (MODAIS) -->
+    <!-- Formulário de contato oculto por padrão. Só aparece quando o usuário clica em "Entrar em contato". -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/sections.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+
+</head>
+
+<body class="home">
+
+    <!-- TELA DE CARREGAMENTO (PRELOADER) -->
+    <!-- Esta div cobre a tela inteira enquanto os recursos estão carregando. 
+         A animação de carregamento (bolinha preta) acontece aqui dentro. -->
+    <div id="r-preloader" class="r-preloader">
+        <canvas id="r-preloader-canvas"></canvas>
+        <div class="r-preloader__container">
+            <div class="r-preloader__background"></div>
+            <div class="r-preloader__circle"></div>
+        </div>
+    </div>
+
+    <!-- CABEÇALHO (HEADER) -->
+    <!-- Barra de navegação fixa no topo. Contém o logotipo e o menu principal (navbar). -->
+    <header id="masthead" class="site-header">
+        <div class="container">
+            <div class="r-header__item r-header__item--logo">
+                <div class="site-logo">
+                    <a href="#" rel="home">
+                        <!-- Default Dark Logo -->
+                        <img src="assets/images/Webgamma-logo-b-01.svg" class="custom-logo dark-logo" alt="Webgamma"
+                            width="168" height="30">
+                    </a>
+                </div>
+            </div>
+
+            <div class="r-header__item r-header__item--menu">
+                <div class="nav-container">
+                    <ul class="main-menu">
+                        <li><a href="#work">Trabalhos</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="#services">Serviços <span><svg class="menu-item__icon" width="10" height="6"
+                                        viewBox="0 0 10 6" fill="none">
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#branding">Branding</a></li>
+                                <li><a href="#web-design">Design de Sites</a></li>
+                                <li><a href="#development">Desenvolvimento</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+
+                    <div class="menu-sm-social">
+                        <ul class="social-media-icons titles">
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Behance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="r-header__item r-header__item--cta">
+                <ul class="cta-menu">
+                    <li><a href="#contact" class="open-popup" data-popup="#contact-popup">Vamos conversar</a></li>
+                </ul>
+            </div>
+
+            <button class="menu-toggle nav-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="primary" class="site-main">
+
+        <!-- SEÇÃO PRINCIPAL (HERO) -->
+        <!-- Primeira seção visível ao carregar o site. Ela fica "fixa" (sticky) no fundo 
+             enquanto você rola a página, criando um efeito de paralaxe (sumindo para trás). -->
+        <section class="section section--hero">
+            <div class="container">
+                <div class="hero--home">
+                    <div class="hero__content">
+                        <div class="hero__title">
+                            <h1 class="font-heading">Criando produtos digitais com propósito</h1>
+                            <p class="hero__subtitle">Combinamos estratégia, design e tecnologia para construir
+                                experiências digitais que apoiem os objetivos do seu negócio.</p>
+                        </div>
+                        <div class="hero__links">
+                            <a href="#service-1" class="hero__link r-image is-svg" aria-label="UI/UX Design">
+                                <div class="r-image-mask"><img src="assets/images/UI-UX-hero-01.svg" alt="UI/UX Design">
+                                </div>
+                            </a>
+                            <a href="#service-2" class="hero__link r-image is-svg" aria-label="Development">
+                                <div class="r-image-mask"><img src="assets/images/Development-hero-b-01.svg"
+                                        alt="Development"></div>
+                            </a>
+                            <a href="#service-3" class="hero__link r-image is-svg" aria-label="Design Support">
+                                <div class="r-image-mask"><img src="assets/images/Design-support-hero-01.svg"
+                                        alt="Design Support"></div>
+                            </a>
+                            <a href="#service-4" class="hero__link r-image is-svg" aria-label="Integration">
+                                <div class="r-image-mask"><img src="assets/images/Integration-hero-b-01.svg"
+                                        alt="Integration"></div>
+                            </a>
+                            <a href="#service-5" class="hero__link r-image is-svg" aria-label="Branding">
+                                <div class="r-image-mask"><img src="assets/images/Branding-hero-01.svg" alt="Branding">
+                                </div>
+                            </a>
+                            <a href="#service-6" class="hero__link r-image is-svg" aria-label="Research">
+                                <div class="r-image-mask"><img src="assets/images/Research-hero-b-01.svg"
+                                        alt="Research"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE PROJETOS EM DESTAQUE -->
+        <!-- Exibe os cards de portfólio organizados em um layout "Masonry" (alvenaria), 
+             onde a coluna do meio tem um espaçamento diferente para dar um visual dinâmico. -->
+        <section class="section section--projects pt--150">
+            <div class="container">
+                <div class="section--header mb_3">
+                    <div class="section__text scroll-animate">
+                        <div class="text__heading">
+                            <h2 class="font-heading has-large-font-size">Projetos em Destaque</h2>
+                        </div>
+                        <div class="text__content">
+                            <p>Aqui está uma seleção de nossos trabalhos recentes em vários setores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-3 stagger-children">
+                    <a href="#" class="project__item scroll-animate delay-1">
+                        <div class="project__title">
+                            <h3 class="font-heading has-medium-font-size">CDP</h3>
+                            <span class="button button--alt">Ver Case <svg class="arrow-right"
+                                    style="width:12px;height:12px;">
+                                    <use href="#arrow-right"></use>
+                                </svg></span>
+                        </div>
+                        <div class="card__tags mb_2">
+                            <span class="tag fs-sm-13">Branding</span>
+                            <span class="tag fs-sm-13">Web Design</span>
+                        </div>
+                        <div class="project__image">
+                            <div class="r-image-mask">
+                                <img src="assets/images/CDP-project-card-01-828x1024.png" alt="CDP Project">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="project__item scroll-animate delay-2">
+                        <div class="project__title">
+                            <h3 class="font-heading has-medium-font-size">Via</h3>
+                            <span class="button button--alt">Ver Case <svg class="arrow-right"
+                                    style="width:12px;height:12px;">
+                                    <use href="#arrow-right"></use>
+                                </svg></span>
+                        </div>
+                        <div class="card__tags mb_2">
+                            <span class="tag fs-sm-13">UI/UX</span>
+                            <span class="tag fs-sm-13">Development</span>
+                        </div>
+                        <div class="project__image">
+                            <div class="r-image-mask">
+                                <img src="assets/images/Via-project-card-03-903x1024.png" alt="Via Project">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="project__item scroll-animate delay-2">
+                        <div class="project__title">
+                            <h3 class="font-heading has-medium-font-size">TriLed</h3>
+                            <span class="button button--alt">Ver Case <svg class="arrow-right"
+                                    style="width:12px;height:12px;">
+                                    <use href="#arrow-right"></use>
+                                </svg></span>
+                        </div>
+                        <div class="card__tags mb_2">
+                            <span class="tag fs-sm-13">Web Design</span>
+                            <span class="tag fs-sm-13">Development</span>
+                        </div>
+                        <div class="project__image">
+                            <div class="r-image-mask">
+                                <img src="assets/images/triLed-project-card-01-1024x955.png" alt="TriLed Project">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="project__item scroll-animate delay-3">
+                        <div class="project__title">
+                            <h3 class="font-heading has-medium-font-size">Oktos</h3>
+                            <span class="button button--alt">Ver Case <svg class="arrow-right"
+                                    style="width:12px;height:12px;">
+                                    <use href="#arrow-right"></use>
+                                </svg></span>
+                        </div>
+                        <div class="card__tags mb_2">
+                            <span class="tag fs-sm-13">Branding</span>
+                        </div>
+                        <div class="project__image">
+                            <div class="r-image-mask">
+                                <img src="assets/images/Operatif-project-card-001-1024x918.png" alt="Oktos Project">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="project__item scroll-animate delay-3">
+                        <div class="project__title">
+                            <h3 class="font-heading has-medium-font-size">Synapse</h3>
+                            <span class="button button--alt">Ver Case <svg class="arrow-right"
+                                    style="width:12px;height:12px;">
+                                    <use href="#arrow-right"></use>
+                                </svg></span>
+                        </div>
+                        <div class="card__tags mb_2">
+                            <span class="tag fs-sm-13">App Design</span>
+                        </div>
+                        <div class="project__image">
+                            <div class="r-image-mask">
+                                <img src="assets/images/Ci-wallet-project-card-001-901x1024.png" alt="Synapse Project">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="project__item scroll-animate delay-4">
+                        <div class="project__title">
+                            <h3 class="font-heading has-medium-font-size">Nexus</h3>
+                            <span class="button button--alt">Ver Case <svg class="arrow-right"
+                                    style="width:12px;height:12px;">
+                                    <use href="#arrow-right"></use>
+                                </svg></span>
+                        </div>
+                        <div class="card__tags mb_2">
+                            <span class="tag fs-sm-13">Development</span>
+                        </div>
+                        <div class="project__image">
+                            <div class="r-image-mask">
+                                <img src="assets/images/No-culture-project-card-001-1024x955.png" alt="Nexus Project">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="btn-wrap has-text-align-center pt_5 scroll-animate">
+                    <a href="#work" class="button">
+                        Ver todos os projetos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEXTO GIGANTE REVELADO NO SCROLL -->
+        <!-- Esta seção tem 200svh de altura para permitir que o texto fique fixo no meio da tela 
+             enquanto a cor preta do texto é preenchida conforme a barra de rolagem desce. -->
+        <section class="section text-large">
+            <div class="container">
+                <div class="text-large__pin">
+                    <p class="font-heading has-gigantic-font-size">
+                        <span class="r-line">Vamos dar vida</span>
+                        <span class="r-line">à sua ideia</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRADE DE SERVIÇOS -->
+        <!-- Lista os serviços da agência em 3 colunas (grid-3). Usa ícones e botões com seta. -->
+        <section class="section section--text-grid pt--150 pb--150">
+            <div class="container">
+                <div class="section--header mb_3">
+                    <div class="section__text scroll-animate">
+                        <div class="text__heading">
+                            <h2 class="font-heading has-large-font-size">Do design web ao desenvolvimento e além</h2>
+                        </div>
+                        <div class="text__content">
+                            <p>Desde o design web até a integração de IA complexa, cobrimos todas as suas necessidades
+                                digitais com excelência.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-3 stagger-children">
+                    <div class="grid-3__item">
+                        <div class="r-image-mask is-svg mb_2"><img src="assets/images/Branding-hero-01.svg"
+                                alt="Branding"></div>
+                        <a href="#branding" class="grid-3__item__url">
+                            <h3 class="has-medium-font-size">Branding <svg class="arrow-right">
+                                    <use href="#arrow-right"></use>
+                                </svg></h3>
+                        </a>
+                        <p>Desenvolver um sistema coeso de identidade visual que integre gráficos, tipografia e outros
+                            elementos para comunicar efetivamente a mensagem da sua marca.</p>
+                    </div>
+                    <div class="grid-3__item">
+                        <div class="r-image-mask is-svg mb_2"><img src="assets/images/UI-UX-hero-01.svg"
+                                alt="UI/UX Design"></div>
+                        <a href="#ui-ux" class="grid-3__item__url">
+                            <h3 class="has-medium-font-size">Design de UI/UX <svg class="arrow-right">
+                                    <use href="#arrow-right"></use>
+                                </svg></h3>
+                        </a>
+                        <p>Seguir princípios de design centrados no usuário para garantir que todas as interações com os
+                            produtos digitais da sua marca sejam funcionais e visualmente atraentes.</p>
+                    </div>
+                    <div class="grid-3__item">
+                        <div class="r-image-mask is-svg mb_2"><img src="assets/images/Development-hero-01.svg"
+                                alt="Web Development"></div>
+                        <a href="#development" class="grid-3__item__url">
+                            <h3 class="has-medium-font-size">Desenvolvimento Web <svg class="arrow-right">
+                                    <use href="#arrow-right"></use>
+                                </svg></h3>
+                        </a>
+                        <p>Utilizando uma variedade de stacks tecnológicos para criar protótipos e desenvolver sites e
+                            aplicativos, fazendo a ponte entre as complexidades de programação e a experiência do
+                            usuário.</p>
+                    </div>
+                    <div class="grid-3__item">
+                        <div class="r-image-mask is-svg mb_2"><img src="assets/images/Research-hero-01.svg"
+                                alt="Research"></div>
+                        <a href="#research" class="grid-3__item__url">
+                            <h3 class="has-medium-font-size">Pesquisa UX <svg class="arrow-right">
+                                    <use href="#arrow-right"></use>
+                                </svg></h3>
+                        </a>
+                        <p>Realizar pesquisa de UX para identificar áreas onde seu site, marca ou produto digital pode
+                            se diferenciar e superar os concorrentes.</p>
+                    </div>
+                    <div class="grid-3__item">
+                        <div class="r-image-mask is-svg mb_2"><img src="assets/images/Integration-hero-b-t-s-01.svg"
+                                alt="AI Integration"></div>
+                        <a href="#ai" class="grid-3__item__url">
+                            <h3 class="has-medium-font-size">Integração com IA <svg class="arrow-right">
+                                    <use href="#arrow-right"></use>
+                                </svg></h3>
+                        </a>
+                        <p>Automação de tarefas repetitivas e integração de softwares e ferramentas de terceiros,
+                            seguindo as melhores práticas de integração e automação de IA.</p>
+                    </div>
+                    <div class="grid-3__item">
+                        <div class="r-image-mask is-svg mb_2"><img src="assets/images/Design-support-hero-01.svg"
+                                alt="Design Support"></div>
+                        <a href="#support" class="grid-3__item__url">
+                            <h3 class="has-medium-font-size">Suporte ao Projeto <svg class="arrow-right">
+                                    <use href="#arrow-right"></use>
+                                </svg></h3>
+                        </a>
+                        <p>Supervisionar a gestão contínua e atualização do seu produto digital ou site após o
+                            lançamento ou redesenho para garantir que ele continue evoluindo e permanecendo relevante.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO "ESTAMOS PRONTOS" -->
+        <!-- Um cartão grande e preto com um botão de ação. A imagem da equipe (memojis) 
+             é posicionada de forma absoluta na direita para "vazar" do cartão. -->
+        <section class="section section--ready">
+            <div class="container">
+                <div class="ready-card"
+                    style="background-color: var(--color-heading); border-radius: var(--radius-xl); display: flex; align-items: center; position: relative;">
+                    <div class="ready-content"
+                        style="flex: 1; padding: 90px 60px; color: var(--color-white); max-width: 60%; position: relative; z-index: 2;">
+                        <h2 class="font-heading mb_3 scroll-animate color-white"
+                            style="font-size: 2.8rem; line-height: 1.2;">Estamos prontos para enfrentar
+                            diferentes projetos</h2>
+                        <p class="mb_4 scroll-animate delay-1"
+                            style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6; margin-bottom: 60px;">
+                            Na Webgamma,
+                            ajudamos marcas e empresas a crescer e se adaptar por meio da transformação digital. Focamos
+                            em ajudar os clientes a descobrir novas oportunidades e a se manterem à frente em um cenário
+                            digital em rápida evolução.</p>
+                        <a href="#contact" class="button button--primary scroll-animate delay-2 open-popup"
+                            data-popup="#contact-popup"
+                            style="background-color: var(--color-white); color: var(--color-heading);">Entrar em
+                            contato</a>
+                    </div>
+                    <div class="ready-image scroll-animate delay-1"
+                        style="position: absolute; right: -80px; top: -20%; bottom: -20%; width: 58%; pointer-events: none; z-index: 1;">
+                        <img src="assets/images/Main-team-01-1024x901.png" alt="Equipe Webgamma"
+                            style="width: 100%; height: 100%; object-fit: contain; object-position: right center;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- LOGOTIPOS DE PLATAFORMAS (INFINITE MARQUEE) -->
+        <!-- Carrossel contínuo sem texto passando infinitamente -->
+        <section class="section section--platforms pt--100 pb--100">
+            <div class="platforms-marquee">
+                <div class="platforms-marquee__track">
+                    <!-- Set 1 -->
+                    <div class="platforms__item"><img src="assets/images/Webflow.svg" alt="Webflow" height="48"></div>
+                    <div class="platforms__item"><img src="assets/images/Main-figma.svg" alt="Figma" height="48"></div>
+                    <div class="platforms__item"><img src="assets/images/Main-github.svg" alt="GitHub" height="48">
+                    </div>
+                    <div class="platforms__item"><img src="assets/images/Main-notion.svg" alt="Notion" height="48">
+                    </div>
+                    <div class="platforms__item"><img src="assets/images/Main-slack.svg" alt="Slack" height="48"></div>
+                    <div class="platforms__item"><img src="assets/images/Main-miro.svg" alt="Miro" height="48"></div>
+                    <!-- Set 2 -->
+                    <div class="platforms__item"><img src="assets/images/Webflow.svg" alt="Webflow" height="48"></div>
+                    <div class="platforms__item"><img src="assets/images/Main-figma.svg" alt="Figma" height="48"></div>
+                    <div class="platforms__item"><img src="assets/images/Main-github.svg" alt="GitHub" height="48">
+                    </div>
+                    <div class="platforms__item"><img src="assets/images/Main-notion.svg" alt="Notion" height="48">
+                    </div>
+                    <div class="platforms__item"><img src="assets/images/Main-slack.svg" alt="Slack" height="48"></div>
+                    <div class="platforms__item"><img src="assets/images/Main-miro.svg" alt="Miro" height="48"></div>
+                    <!-- Set 3 -->
+                    <div class="platforms__item"><img src="assets/images/Webflow.svg" alt="Webflow" height="48"></div>
+                    <div class="platforms__item"><img src="assets/images/Main-figma.svg" alt="Figma" height="48"></div>
+                    <div class="platforms__item"><img src="assets/images/Main-github.svg" alt="GitHub" height="48">
+                    </div>
+                    <div class="platforms__item"><img src="assets/images/Main-notion.svg" alt="Notion" height="48">
+                    </div>
+                    <div class="platforms__item"><img src="assets/images/Main-slack.svg" alt="Slack" height="48"></div>
+                    <div class="platforms__item"><img src="assets/images/Main-miro.svg" alt="Miro" height="48"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAMADA FINAL PARA CONTATO (CTA) -->
+        <!-- Última seção antes do rodapé. Um convite centralizado com botão para abrir o pop-up de contato. -->
+        <section class="section section--cta pt--100 pb--150 has-text-align-center">
+            <div class="container">
+                <div class="section__text scroll-animate">
+                    <h2 class="font-heading has-large-font-size mb_2">Tem algum projeto em mente?<br>Vamos entrar em
+                        contato</h2>
+                    <p class="has-normal-font-size mb_3">Compartilhe sua ideia de projeto conosco! Se nossa parceria não
+                        for a mais adequada, teremos prazer em fornecer insights valiosos que ainda podem beneficiar
+                        você.</p>
+                    <a href="#contact" class="button button--primary open-popup" data-popup="#contact-popup">Começar um
+                        projeto</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ (FOOTER) -->
+    <!-- Contém e-mail de contato, links rápidos, redes sociais e menu sanfona para endereços. -->
+    <footer id="colophon" class="site-footer">
+        <div class="footer-noise"></div>
+        <div class="container footer__container"
+            style="display: flex; flex-direction: column; justify-content: space-between; min-height: 50vh; padding-top: 80px; position: relative; z-index: 2;">
+            <div class="footer__top"
+                style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; width: 100%;">
+
+                <!-- Coluna 1: Contato -->
+                <div class="footer__col">
+                    <p class="footer__label"
+                        style="color: var(--color-white); font-size: 1.1rem; font-weight: 600; margin-bottom: 20px;">
+                        Contato</p>
+                    <ul class="footer__list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="mailto:contato@webgamma.com.br" class="footer__link"
+                                style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.1rem; transition: color 0.3s;">contato@webgamma.com.br</a>
+                        </li>
+                        <li style="margin-bottom: 12px;"><a href="https://wa.me/5511999999999" target="_blank"
+                                class="footer__link"
+                                style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.1rem; transition: color 0.3s;">WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2: Navegação -->
+                <div class="footer__col">
+                    <p class="footer__label"
+                        style="color: var(--color-white); font-size: 1.1rem; font-weight: 600; margin-bottom: 20px;">
+                        Navegação</p>
+                    <ul class="footer__list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="#work" class="footer__link"
+                                style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.1rem; transition: color 0.3s;">Trabalhos</a>
+                        </li>
+                        <li style="margin-bottom: 12px;"><a href="#about" class="footer__link"
+                                style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.1rem; transition: color 0.3s;">Sobre</a>
+                        </li>
+                        <li style="margin-bottom: 12px;"><a href="#services" class="footer__link"
+                                style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.1rem; transition: color 0.3s;">Serviços</a>
+                        </li>
+                        <li style="margin-bottom: 12px;"><a href="#blog" class="footer__link"
+                                style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.1rem; transition: color 0.3s;">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Legal -->
+                <div class="footer__col">
+                    <p class="footer__label"
+                        style="color: var(--color-white); font-size: 1.1rem; font-weight: 600; margin-bottom: 20px;">
+                        Legal</p>
+                    <ul class="footer__list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="#" class="footer__link"
+                                style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.1rem; transition: color 0.3s;">Termos
+                                de Uso</a>
+                        </li>
+                        <li style="margin-bottom: 12px;"><a href="#" class="footer__link"
+                                style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.1rem; transition: color 0.3s;">Política
+                                de Privacidade</a></li>
+                        <li style="margin-bottom: 12px;"><a href="#" class="footer__link"
+                                style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 1.1rem; transition: color 0.3s;">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin: 0;">&copy; 2026 Webgamma. Todos
+                        os direitos reservados.</p>
+                </div>
+                <div class="footer__social-icons">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__giant-brand"
+                style="width: 100%; text-align: center; margin-top: 40px; overflow: hidden; transform: translateY(20%);">
+                <div class="giant-text font-heading color-white"
+                    style="font-size: 18vw; line-height: 0.75; letter-spacing: -0.06em; font-weight: 700; user-select: none;">
+                    Webgamma</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Popup -->
+    <div id="contact-popup" class="popup">
+        <div class="popup__overlay dark"></div>
+        <div class="popup__scroll container">
+            <div class="popup__close close-popup" data-id="#contact-popup">
+                <svg class="close" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.2315 12.0002L0.113281 1.88203L1.88105 0.114258L11.9993 10.2325L22.1175 0.114258L23.8852 1.88203L13.767 12.0002L23.8841 22.1173L22.1163 23.8851L11.9993 13.768L1.88219 23.8851L0.114426 22.1173L10.2315 12.0002Z"
+                        fill="white" />
+                </svg>
+            </div>
+            <div class="popup__header">
+                <div class="popup__form dark">
+                    <h2 class="font-heading has-large-font-size mb_3">Vamos iniciar um projeto juntos</h2>
+                    <form action="#" method="post">
+                        <div class="form-group mb_2">
+                            <input type="text" name="name" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="form-group mb_2">
+                            <input type="email" name="email" placeholder="Seu E-mail" required>
+                        </div>
+                        <div class="form-group mb_3">
+                            <p class="mb_1 color-white">Quais serviços você procura?</p>
+                            <div class="service-options">
+                                <label><input type="checkbox" name="services[]" value="branding"><span
+                                        class="wpcf7-list-item-label">Branding</span></label>
+                                <label><input type="checkbox" name="services[]" value="web_design"><span
+                                        class="wpcf7-list-item-label">Design de Sites</span></label>
+                                <label><input type="checkbox" name="services[]" value="development"><span
+                                        class="wpcf7-list-item-label">Desenvolvimento</span></label>
+                            </div>
+                        </div>
+                        <div class="form-group mb_2">
+                            <textarea name="message" placeholder="Detalhes do Projeto" rows="4"></textarea>
+                        </div>
+                        <div class="submit-wrap">
+                            <input type="submit" value="Enviar Solicitação">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SVGs for reuse -->
+    <svg width="0" height="0" class="hidden" style="display: none;">
+        <symbol viewBox="-2 -2 20 16" fill="none" id="arrow-right">
+            <path d="M1 6H16M16 6L11 1M16 6L11 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol width="14" height="14" viewBox="0 0 14 14" fill="none" id="arrow-up-right">
+            <path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+    </svg>
+
+    <!-- Scripts -->
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/popups.js"></script>
+    <script src="assets/js/scroll-animations.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
